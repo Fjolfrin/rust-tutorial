@@ -6,10 +6,10 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
     
-    println!("The secret_number is: {secret_number}");
+    //println!("The secret_number is: {secret_number}");
    
     loop {
-        println!("Please input your guess: ");
+        println!("Please input your guess (integer between 0 and 100): ");
     
         let mut guess = String::new();
 
