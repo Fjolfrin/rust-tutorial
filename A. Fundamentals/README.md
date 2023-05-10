@@ -9,3 +9,4 @@ This folder contains scripts that address the fundamental notions of the Rust pr
 4. **functions:** Experimentation with function declaration and structure in Rust.
 5. **control_flow:** Experimentation with control flow (if statements, repetition loops) in Rust.
 6. **ownership:** Exploring ownership and memory mechanics in Rust.
+7. **slices:** Experimentation with slices in Rust.
