@@ -11,3 +11,4 @@ This folder contains scripts that address the fundamental notions of the Rust pr
 6. **ownership:** Exploring ownership and memory mechanics in Rust.
 7. **slices:** Experimentation with slices in Rust.
 8. **structs:** Experimentation with the struct feature in Rust.
+9. **enums:** Experimentation with enums and pattern matching in Rust.
