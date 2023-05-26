@@ -1,4 +1,5 @@
 use std::io;
+use std::time::Instant;
 
 fn main() {
     println!("Enter which digit of the Fibonacci sequence you want to calculate.");
@@ -15,18 +16,22 @@ fn main() {
     };
 
     println!("You want to calculate up to the {digit}th digit.");
-    fibonacci(digit)
+    let t = Instant::now();
+    fibonacci(digit);
+    let duration = t.elapsed();
+
+    println!("Caclulated {} digits of the Fibonacci sequence at {:?}.", digit, duration);
 }
 
 
 fn fibonacci(d: u64) {
     
-    let mut dig: u128 = 1;
-    let mut prev: u128 = 0;
-    for i in 0..d {
-        let index = i + 1;
-        println!("{index}. {dig}");
-        let swap = dig;
+    let mut dig: num::BigUint = num::traits::One::one();
+    let mut prev: num::BigUint = num::traits::Zero::zero();
+    for _ in 0..d {
+        //let index = i + 1;
+        //println!("{}. {}", index, dig);
+        let swap = dig.clone();
         dig += prev;
         prev = swap;       
     }
